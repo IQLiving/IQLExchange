@@ -1,0 +1,14 @@
+{
+    "id": "{B5D1BEFB-DA80-4063-BB84-92C8BCB5150C}",
+    "name": "IQLExchange",
+    "type": 3,
+    "vendor": "IQLiving",
+    "aliases": 
+    [
+        "IQLExchange"
+    ],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "IQLEX"
+}

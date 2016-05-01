@@ -1,0 +1,27 @@
+{
+	"elements":
+	[
+		{ "name": "login", "type": "ValidationTextBox", "caption": "Login" },
+		{ "name": "password", "type": "PasswordTextBox", "caption": "Passwort" },
+		{ "name": "user", "type": "ValidationTextBox", "caption": "Kalender User" },
+		{ "name": "serverversion", "type": "Select", "caption": "Server Version", 
+			"options": [ 
+				{ "label": "MS Exchange 2007/2010/2013", "value": "exV15" }
+			]
+		},
+		{ "name": "host", "type": "ValidationTextBox", "caption": "Server" },
+		{ "type": "Label", "label": "Bitte hier die Suchbegriffe eintragen Komma getrennt" },
+		{ "name": "search", "type": "ValidationTextBox", "caption": "Suchbegriffe" },
+		{ "name": "timeframe", "type": "Select", "caption": "Zeitraum", 
+			"options": [ 
+				{ "label": "Heute", "value": "today" },
+				{ "label": "Morgen", "value": "tomorrow" }
+			]
+		},
+		
+	],
+	"actions":
+	[
+		{ "type": "Button", "label": "Update", "onClick": "IQLEX_Update($id);" }
+	]	
+}
