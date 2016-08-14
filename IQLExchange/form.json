@@ -18,7 +18,8 @@
 				{ "label": "Morgen", "value": "tomorrow" }
 			]
 		},
-		
+		{ "name": "starttime", "type": "ValidationTextBox", "caption": "Startzeit" },
+		{ "name": "endtime", "type": "ValidationTextBox", "caption": "Endzeit" }
 	],
 	"actions":
 	[

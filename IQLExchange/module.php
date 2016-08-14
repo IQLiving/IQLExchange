@@ -13,6 +13,8 @@ class IQLExchange extends IPSModule {
 		$this->RegisterPropertyString("host", "");
 		$this->RegisterPropertyString("search", "URLAUB!!!, Urlaub!!!, Urlaub !!!, URLAUB !!!, Urlaub, URLAUB, Vacation - Confirmed");
 		$this->RegisterPropertyString("timeframe", "today");
+		$this->RegisterPropertyString("starttime","00:00:00");
+		$this->RegisterPropertyString("endtime","23:59:00");
 	}
 	
 	public function ApplyChanges() {
@@ -46,8 +48,8 @@ class IQLExchange extends IPSModule {
 				$tomorrow = strtotime("+1 Day");
 				$datum = date("Y-m-d\T",$tomorrow);
 			}
-			$startdatum = $datum ."00:00:00Z";
-			$enddatum = $datum ."19:59:59Z";
+			$startdatum = $datum .$this->ReadPropertyString("starttime") ."Z";
+			$enddatum = $datum .$this->ReadPropertyString("endtime") ."Z";
 			$ec = new ExchangeClient();
 			$ec->init($this->ReadPropertyString("login"), $this->ReadPropertyString("password"),$this->ReadPropertyString("user"), "https://" .$this->ReadPropertyString("host") ."/EWS/Services.wsdl");
 			$urlaub = $ec->get_events($startdatum,$enddatum);
